@@ -17,9 +17,14 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28C3AD8A0F43EF2300507BA6 /* MobileOrg.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28C3AD890F43EF2300507BA6 /* MobileOrg.xcdatamodel */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		6C2140521E2629BB008B36BF /* SubHeadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2140511E2629BB008B36BF /* SubHeadingCell.swift */; };
 		6C2D36161E13B1BE007D482F /* SyncSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D36151E13B1BE007D482F /* SyncSettingsController.m */; };
 		6CA292201E25F59F0034FD53 /* Outline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA2921F1E25F59F0034FD53 /* Outline.storyboard */; };
 		6CA292221E25F5E00034FD53 /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA292211E25F5E00034FD53 /* OutlineViewController.swift */; };
+		6CA292241E2624F80034FD53 /* HeadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA292231E2624F80034FD53 /* HeadingCell.swift */; };
+		6CA292261E26252E0034FD53 /* ToolbarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA292251E26252E0034FD53 /* ToolbarCell.swift */; };
+		6CA292281E26254D0034FD53 /* TagsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA292271E26254D0034FD53 /* TagsCell.swift */; };
+		6CA2922A1E26257C0034FD53 /* BodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA292291E26257C0034FD53 /* BodyCell.swift */; };
 		743C12F41DFED37F0051EC6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743C12F31DFED37F0051EC6F /* Images.xcassets */; };
 		743C12F61DFED5950051EC6F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743C12F51DFED5950051EC6F /* Launch Screen.storyboard */; };
 		744408DE1E035A1800BCE192 /* DropboxTransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744408DD1E035A1800BCE192 /* DropboxTransferManager.swift */; };
@@ -149,10 +154,15 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MobileOrg_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileOrg_Prefix.pch; sourceTree = "<group>"; };
 		6561B399A841A3A5958A5889 /* Pods-MobileOrg.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileOrg.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-MobileOrg/Pods-MobileOrg.appstore.xcconfig"; sourceTree = "<group>"; };
+		6C2140511E2629BB008B36BF /* SubHeadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubHeadingCell.swift; sourceTree = "<group>"; };
 		6C2D36141E13B19B007D482F /* SyncSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncSettingsController.h; sourceTree = "<group>"; };
 		6C2D36151E13B1BE007D482F /* SyncSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncSettingsController.m; sourceTree = "<group>"; };
 		6CA2921F1E25F59F0034FD53 /* Outline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Outline.storyboard; sourceTree = "<group>"; };
 		6CA292211E25F5E00034FD53 /* OutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineViewController.swift; sourceTree = "<group>"; };
+		6CA292231E2624F80034FD53 /* HeadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingCell.swift; sourceTree = "<group>"; };
+		6CA292251E26252E0034FD53 /* ToolbarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarCell.swift; sourceTree = "<group>"; };
+		6CA292271E26254D0034FD53 /* TagsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsCell.swift; sourceTree = "<group>"; };
+		6CA292291E26257C0034FD53 /* BodyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyCell.swift; sourceTree = "<group>"; };
 		743C12F31DFED37F0051EC6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MobileOrg/Images.xcassets; sourceTree = "<group>"; };
 		743C12F51DFED5950051EC6F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		744408DD1E035A1800BCE192 /* DropboxTransferManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropboxTransferManager.swift; path = Dropbox/DropboxTransferManager.swift; sourceTree = "<group>"; };
@@ -545,6 +555,13 @@
 		79BA555C1073A6F800D67917 /* Outline */ = {
 			isa = PBXGroup;
 			children = (
+				6CA2921F1E25F59F0034FD53 /* Outline.storyboard */,
+				6CA292211E25F5E00034FD53 /* OutlineViewController.swift */,
+				6CA292231E2624F80034FD53 /* HeadingCell.swift */,
+				6CA292251E26252E0034FD53 /* ToolbarCell.swift */,
+				6CA292271E26254D0034FD53 /* TagsCell.swift */,
+				6CA292291E26257C0034FD53 /* BodyCell.swift */,
+				6C2140511E2629BB008B36BF /* SubHeadingCell.swift */,
 				790B413D10814D8400A852F1 /* ActionMenuController.h */,
 				790B413E10814D8400A852F1 /* ActionMenuController.m */,
 				79CB1F0F10758EA200A7E065 /* DetailsViewController.h */,
@@ -555,8 +572,6 @@
 				79CB20B410762CC000A7E065 /* NodeTextEditController.m */,
 				790B417C10814FAC00A852F1 /* OutlineTableView.h */,
 				790B417D10814FAC00A852F1 /* OutlineTableView.m */,
-				6CA2921F1E25F59F0034FD53 /* Outline.storyboard */,
-				6CA292211E25F5E00034FD53 /* OutlineViewController.swift */,
 				7982F3681073F33500AEA6BC /* OutlineViewController.h */,
 				7982F3691073F33500AEA6BC /* OutlineViewController.m */,
 				7998AC111079180F0000ED49 /* TagEditController.h */,
@@ -964,6 +979,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				6CA292241E2624F80034FD53 /* HeadingCell.swift in Sources */,
 				28C3AD8A0F43EF2300507BA6 /* MobileOrg.xcdatamodel in Sources */,
 				79BA55621073A6F800D67917 /* MobileOrgAppDelegate.m in Sources */,
 				7982F3621073F2FA00AEA6BC /* Node.m in Sources */,
@@ -973,6 +989,7 @@
 				7982F3651073F2FA00AEA6BC /* LocalEditAction.m in Sources */,
 				7982F36A1073F33500AEA6BC /* OutlineViewController.m in Sources */,
 				7982F37D1073F6B700AEA6BC /* GlobalUtils.m in Sources */,
+				6CA2922A1E26257C0034FD53 /* BodyCell.swift in Sources */,
 				7982F3BA1073FBF800AEA6BC /* DataUtils.m in Sources */,
 				79CB17F9107420E300A7E065 /* SyncManager.m in Sources */,
 				79CB1821107425EF00A7E065 /* TransferContext.m in Sources */,
@@ -989,6 +1006,7 @@
 				79CB20B510762CC000A7E065 /* NodeTextEditController.m in Sources */,
 				791653A81078109B00695E4C /* EditsFileParser.m in Sources */,
 				791653C2107814C500695E4C /* EditEntity.m in Sources */,
+				6CA292261E26252E0034FD53 /* ToolbarCell.swift in Sources */,
 				7998AC131079180F0000ED49 /* TagEditController.m in Sources */,
 				7998AFDB10797C300000ED49 /* RoundedLabel.m in Sources */,
 				746103091E017E5700C8E34F /* String+RegexSplitter.swift in Sources */,
@@ -1002,7 +1020,9 @@
 				793F8128107D38C900674D0A /* OutlineState.m in Sources */,
 				790B413F10814D8400A852F1 /* ActionMenuController.m in Sources */,
 				790B417E10814FAC00A852F1 /* OutlineTableView.m in Sources */,
+				6C2140521E2629BB008B36BF /* SubHeadingCell.swift in Sources */,
 				790B455610826A0900A852F1 /* PriorityEditController.m in Sources */,
+				6CA292281E26254D0034FD53 /* TagsCell.swift in Sources */,
 				7945F5A111A8066200731598 /* WebDavTransferManager.m in Sources */,
 				18A3BBA716178DCD003D9320 /* Reachability.m in Sources */,
 			);
