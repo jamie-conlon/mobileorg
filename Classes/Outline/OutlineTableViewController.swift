@@ -10,9 +10,26 @@ import UIKit
 
 class OutlineTableViewController: UITableViewController {
 
+  var root: Node!
+  var nodes = [Node]()
+  
+  @objc init(withNode node: Node ) {
+  
+    self.root = node
+    nodes = self.root.sortedChildren() as! [Node] // will this work?
+    
+    // does this work?
+    super.init(nibName: nil, bundle: nil)
+  }
+ 
+  // what is this?
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +46,33 @@ class OutlineTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+      
+      var node: Node
+      node = self.nodes[indexPath.row]
+      
+      //if indexPath.row == 0 {
+      self.tableView.register(HeadingCell.self, forCellReuseIdentifier: "headingCell")
 
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "headingCell", for: indexPath) as! HeadingCell
 
+      print("node heading:%@", node.heading)
+        cell.headingTextField?.text = "hello?"//node.heading
+      cell.textLabel?.text = "sdff"
+      //}
+    
         return cell
     }
-    */
+  
 
     /*
     // Override to support conditional editing of the table view.

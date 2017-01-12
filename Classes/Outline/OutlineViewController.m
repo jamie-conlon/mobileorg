@@ -34,6 +34,8 @@
 #import "ActionMenuController.h"
 #import "OutlineTableView.h"
 
+#import "MobileOrg-Swift.h"
+
 //
 // Private interface
 //
@@ -141,11 +143,20 @@
 
     switch (selectionType) {
         case OutlineSelectionTypeExpandOutline:
-        {
+        /*{
             OutlineViewController *controller = [[[OutlineViewController alloc] initWithRootNode:node] autorelease];
             [[self navigationController] pushViewController:controller animated:animation];
             ret = controller;
             break;
+        }*/
+        {
+          UIStoryboard *outlineStoryboard = [UIStoryboard storyboardWithName:@"Outline" bundle:nil];
+          OutlineTableViewController *outlineController = [[outlineStoryboard instantiateInitialViewController]initWithNode:node]; // there should be an init...
+          [[self navigationController] pushViewController:outlineController animated:animation];
+          
+          ret = outlineController;
+
+          break;
         }
         case OutlineSelectionTypeDetails:
         {
