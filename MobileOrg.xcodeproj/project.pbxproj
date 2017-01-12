@@ -18,7 +18,6 @@
 		28C3AD8A0F43EF2300507BA6 /* MobileOrg.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28C3AD890F43EF2300507BA6 /* MobileOrg.xcdatamodel */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		6C2140521E2629BB008B36BF /* SubHeadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2140511E2629BB008B36BF /* SubHeadingCell.swift */; };
-		6C2140541E266A6F008B36BF /* syncsettingscontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2140531E266A6F008B36BF /* syncsettingscontroller.m */; };
 		6C2D36161E13B1BE007D482F /* SyncSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D36151E13B1BE007D482F /* SyncSettingsController.m */; };
 		6CA292201E25F59F0034FD53 /* Outline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA2921F1E25F59F0034FD53 /* Outline.storyboard */; };
 		6CA292221E25F5E00034FD53 /* OutlineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA292211E25F5E00034FD53 /* OutlineTableViewController.swift */; };
@@ -160,7 +159,6 @@
 		32CA4F630368D1EE00C91783 /* MobileOrg_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileOrg_Prefix.pch; sourceTree = "<group>"; };
 		6561B399A841A3A5958A5889 /* Pods-MobileOrg.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileOrg.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-MobileOrg/Pods-MobileOrg.appstore.xcconfig"; sourceTree = "<group>"; };
 		6C2140511E2629BB008B36BF /* SubHeadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubHeadingCell.swift; sourceTree = "<group>"; };
-		6C2140531E266A6F008B36BF /* syncsettingscontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = syncsettingscontroller.m; sourceTree = "<group>"; };
 		6C2D36151E13B1BE007D482F /* SyncSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncSettingsController.m; sourceTree = "<group>"; };
 		6CA2921F1E25F59F0034FD53 /* Outline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Outline.storyboard; sourceTree = "<group>"; };
 		6CA292211E25F5E00034FD53 /* OutlineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineTableViewController.swift; sourceTree = "<group>"; };
@@ -619,7 +617,6 @@
 				6CB501EC1E20C3D70082FD40 /* Settings.storyboard */,
 				6CB501ED1E20C3D70082FD40 /* SettingsController.swift */,
 				6CB501EE1E20C3D70082FD40 /* SyncSettingsController.swift */,
-				6C2140531E266A6F008B36BF /* syncsettingscontroller.m */,
 				6CB501EF1E20C3D70082FD40 /* TextInputCell.swift */,
 				79CB183C1074279C00A7E065 /* Settings.h */,
 				79CB183D1074279C00A7E065 /* Settings.m */,
@@ -1016,7 +1013,6 @@
 				791653A81078109B00695E4C /* EditsFileParser.m in Sources */,
 				791653C2107814C500695E4C /* EditEntity.m in Sources */,
 				6CA292261E26252E0034FD53 /* ToolbarCell.swift in Sources */,
-				6C2140541E266A6F008B36BF /* syncsettingscontroller.m in Sources */,
 				7998AC131079180F0000ED49 /* TagEditController.m in Sources */,
 				7998AFDB10797C300000ED49 /* RoundedLabel.m in Sources */,
 				746103091E017E5700C8E34F /* String+RegexSplitter.swift in Sources */,
