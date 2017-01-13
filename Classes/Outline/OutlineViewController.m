@@ -151,7 +151,9 @@
         }*/
         {
           UIStoryboard *outlineStoryboard = [UIStoryboard storyboardWithName:@"Outline" bundle:nil];
-          OutlineTableViewController *outlineController = [[outlineStoryboard instantiateInitialViewController]initWithNode:node]; // there should be an init...
+          //OutlineTableViewController *outlineController = [[outlineStoryboard instantiateInitialViewController]initWithNode:node];
+          OutlineTableViewController *outlineController = [outlineStoryboard instantiateInitialViewController];
+          [outlineController rootInitWithNode:node];
           [[self navigationController] pushViewController:outlineController animated:animation];
           
           ret = outlineController;

@@ -6,19 +6,18 @@
 //  Copyright © 2017 Sean Escriva. All rights reserved.
 //
 
-import UIKit
+//import UIKit
 
 class ToolbarCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+  @IBOutlet weak var todoButton: UIButton!
+  @IBOutlet weak var priorityButton: UIButton!
+  
+  @IBAction func todoPressed(sender: UIButton) {
+    // do something
+  }
+  @IBAction func priorityPressed(sender: UIButton) {
+    // do something
+  }
 
 }

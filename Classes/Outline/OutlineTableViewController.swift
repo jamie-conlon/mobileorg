@@ -11,21 +11,28 @@ import UIKit
 class OutlineTableViewController: UITableViewController {
 
   var root: Node!
-  var nodes = [Node]()
+  var subNodes = [Node]()
   
-  @objc init(withNode node: Node ) {
+ /*
+  init(withNode node: Node ) {
   
     self.root = node
-    nodes = self.root.sortedChildren() as! [Node] // will this work?
+    nodes = self.root.sortedChildren() as! [Node]
     
     // does this work?
-    super.init(nibName: nil, bundle: nil)
+    super.init()
   }
- 
-  // what is this?
+  
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
+ */
+ 
+  @objc func rootInit(node: Node) {
+    self.root = node
+    subNodes = self.root.sortedChildren() as! [Node]
+  }
+  
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,34 +52,87 @@ class OutlineTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+      return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+      var rowCount = 1
+      
+      // TODO if (toobar is enabled in settings) {
+      rowCount+=1
+      // }
+      
+      // TODO if (tags are enabled in settings) {
+      rowCount+=1
+      // }
+      
+      // TODO if (body exists) {
+      rowCount+=1
+      // }
+      
+      rowCount+=subNodes.count
+  
+      return rowCount
     }
-
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-      var node: Node
-      node = self.nodes[indexPath.row]
-      
-      //if indexPath.row == 0 {
-      self.tableView.register(HeadingCell.self, forCellReuseIdentifier: "headingCell")
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "headingCell", for: indexPath) as! HeadingCell
-
-      print("node heading:%@", node.heading)
-        cell.headingTextField?.text = "hello?"//node.heading
-      cell.textLabel?.text = "sdff"
-      //}
+      if indexPath.row == 0 {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "headingCell", for: indexPath) as! HeadingCell
     
+        cell.headingTextField?.text = root.heading
+        
         return cell
+      }
+      else if indexPath.row == 1 { // TODO: && toolbar are enabled {
+      let cell = self.tableView.dequeueReusableCell(withIdentifier: "toolbarCell", for: indexPath) as! ToolbarCell
+        
+        return cell
+      }
+      else if indexPath.row == 2 { // TODO: && tags are enabled {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "tagsCell", for: indexPath) as! TagsCell
+        
+        return cell
+      }
+      else if indexPath.row == 3 { // TODO: && body exists {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "bodyCell", for: indexPath) as! BodyCell
+        
+        return cell
+      }
+      else {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "subHeadingCell", for: indexPath) as! SubHeadingCell
+
+        var subNode: Node
+        subNode = self.subNodes[indexPath.row - 4] // TODO: do this properly!
+        cell.subHeadingTextField?.text = subNode.heading
+        
+        //let storyboard = UIStoryboard(name: "Outline", bundle: nil)
+        //let viewController = storyboard.instantiateInitialViewController() as! OutlineTableViewController
+        //viewController.rootInit(node: subNode)
+        
+        //self.navigationController!.pushViewController(viewController, animated: true)
+        
+        return cell
+      }
     }
   
+
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+    
+    
+    if indexPath.row > 3 {
+    
+    var subNode: Node
+    subNode = self.subNodes[indexPath.row - 4] // TODO: do this properly!
+    
+    let storyboard = UIStoryboard(name: "Outline", bundle: nil)
+    let viewController = storyboard.instantiateInitialViewController() as! OutlineTableViewController
+    viewController.rootInit(node: subNode)
+    
+    self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+  }
 
     /*
     // Override to support conditional editing of the table view.

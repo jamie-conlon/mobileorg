@@ -5,50 +5,43 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Outline Table View Controller-->
         <scene sceneID="bGo-hl-yil">
             <objects>
-                <tableViewController storyboardIdentifier="Outline" id="gZ6-qI-xLK" customClass="OutlineTableViewController" customModule="MobileOrg" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Outline" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gZ6-qI-xLK" customClass="OutlineTableViewController" customModule="MobileOrg" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8lq-zF-XxS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headingCell" rowHeight="48" id="mqv-uB-fEl" customClass="HeadingCell" customModule="MobileOrg" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headingCell" rowHeight="48" id="mqv-uB-fEl" customClass="HeadingCell" customModule="MobileOrg" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mqv-uB-fEl" id="5xo-3U-0jz">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="mqv-uB-fEl" id="5xo-3U-0jz">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Heading 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qag-FS-7qQ">
-                                            <rect key="frame" x="20" y="13" width="89" height="23"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Heading 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qag-FS-7qQ">
+                                            <rect key="frame" x="15" y="13" width="89" height="23"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
-                                                <action selector="editHeadingWithSender:" destination="mqv-uB-fEl" eventType="editingDidEnd" id="ncu-Ew-NSX"/>
+                                                <action selector="editHeadingWithSender:" destination="mqv-uB-fEl" eventType="editingDidEnd" id="L1P-Uy-MBN"/>
                                             </connections>
                                         </textField>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKh-EE-hSU">
-                                            <rect key="frame" x="313" y="14" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="OKh-EE-hSU" firstAttribute="centerY" secondItem="5xo-3U-0jz" secondAttribute="centerY" id="E2e-OA-cPs"/>
-                                        <constraint firstAttribute="trailing" secondItem="OKh-EE-hSU" secondAttribute="trailing" constant="20" id="IW7-b1-gl7"/>
-                                        <constraint firstItem="Qag-FS-7qQ" firstAttribute="centerY" secondItem="5xo-3U-0jz" secondAttribute="centerY" id="pi2-1k-7Jq"/>
-                                        <constraint firstItem="Qag-FS-7qQ" firstAttribute="leading" secondItem="5xo-3U-0jz" secondAttribute="leading" constant="20" id="zoL-Un-nIZ"/>
+                                        <constraint firstItem="Qag-FS-7qQ" firstAttribute="centerY" secondItem="5xo-3U-0jz" secondAttribute="centerY" id="3gu-ye-CpO"/>
+                                        <constraint firstItem="Qag-FS-7qQ" firstAttribute="leading" secondItem="5xo-3U-0jz" secondAttribute="leadingMargin" id="MHk-20-GIP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="headingTextField" destination="Qag-FS-7qQ" id="zcR-Uo-M5v"/>
+                                    <outlet property="headingTextField" destination="Qag-FS-7qQ" id="XyY-jM-RIi"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="toolbarCell" id="tEj-P9-RkI" customClass="ToolbarCell" customModule="MobileOrg" customModuleProvider="target">
@@ -62,11 +55,17 @@
                                             <rect key="frame" x="23" y="6" width="43" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="TODO"/>
+                                            <connections>
+                                                <action selector="todoPressedWithSender:" destination="tEj-P9-RkI" eventType="touchUpInside" id="LCc-Rx-NPT"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6k-8w-K8e">
                                             <rect key="frame" x="155" y="6" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="[#A]"/>
+                                            <connections>
+                                                <action selector="priorityPressedWithSender:" destination="tEj-P9-RkI" eventType="touchUpInside" id="gfZ-CK-BFx"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="scroll for more &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ib-yF-Dgr">
                                             <rect key="frame" x="258" y="12" width="101" height="21"/>
@@ -77,6 +76,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="priorityButton" destination="a6k-8w-K8e" id="Vbr-XA-k1b"/>
+                                    <outlet property="todoButton" destination="w4z-q9-Bwd" id="TMz-bY-5Hq"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tagsCell" rowHeight="30" id="Wcj-a6-rdK" customClass="TagsCell" customModule="MobileOrg" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="120" width="375" height="30"/>
@@ -116,7 +119,7 @@
                                     <outlet property="bodyTextView" destination="fwL-hD-UrL" id="Gm9-v9-OUT"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SubHeadingCell" rowHeight="32" id="zNL-CI-2Jc" customClass="SubHeadingCell" customModule="MobileOrg" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="subHeadingCell" rowHeight="32" id="zNL-CI-2Jc" customClass="SubHeadingCell" customModule="MobileOrg" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="268" width="375" height="32"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zNL-CI-2Jc" id="NxS-qQ-1co">
