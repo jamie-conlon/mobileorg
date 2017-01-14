@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gZ6-qI-xLK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J8O-OU-Akb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Org Files-->
+        <scene sceneID="NVh-bf-TE2">
+            <objects>
+                <tableViewController title="Org Files" id="J8O-OU-Akb" customClass="OrgFileTableViewController" customModule="MobileOrg" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7jG-Cm-IoZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="orgFileCell" id="1S9-wC-26g">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1S9-wC-26g" id="lFz-ro-Jkr">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gZ6-qI-xLK" kind="show" id="0Ve-t3-S6i"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="J8O-OU-Akb" id="wZb-dh-vu4"/>
+                            <outlet property="delegate" destination="J8O-OU-Akb" id="xrO-qH-TH5"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VN5-ga-NuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-676" y="95"/>
+        </scene>
         <!--Outline Table View Controller-->
         <scene sceneID="bGo-hl-yil">
             <objects>
@@ -98,29 +129,33 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bodyCell" rowHeight="118" id="hJN-KK-IBI" customClass="BodyCell" customModule="MobileOrg" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="150" width="375" height="118"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="bodyCell" id="hJN-KK-IBI" customClass="BodyCell" customModule="MobileOrg" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="150" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hJN-KK-IBI" id="m7k-0m-vhE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fwL-hD-UrL">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="117"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fwL-hD-UrL">
+                                            <rect key="frame" x="16" y="8" width="359" height="28"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fwL-hD-UrL" firstAttribute="trailing" secondItem="m7k-0m-vhE" secondAttribute="trailingMargin" constant="8" id="Q8M-Ew-qg4"/>
+                                        <constraint firstItem="fwL-hD-UrL" firstAttribute="top" secondItem="m7k-0m-vhE" secondAttribute="topMargin" id="b2F-3c-AXF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fwL-hD-UrL" secondAttribute="bottom" id="vFA-Sm-KVp"/>
+                                        <constraint firstItem="fwL-hD-UrL" firstAttribute="leading" secondItem="m7k-0m-vhE" secondAttribute="leadingMargin" constant="8" id="yfP-3c-LUC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="bodyTextView" destination="fwL-hD-UrL" id="Gm9-v9-OUT"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="subHeadingCell" rowHeight="32" id="zNL-CI-2Jc" customClass="SubHeadingCell" customModule="MobileOrg" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="268" width="375" height="32"/>
+                                <rect key="frame" x="0.0" y="194" width="375" height="32"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zNL-CI-2Jc" id="NxS-qQ-1co">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="32"/>
@@ -140,6 +175,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="subHeadingTextField" destination="8nG-RN-UUf" id="TAZ-ST-Zhq"/>
+                                    <segue destination="gZ6-qI-xLK" kind="show" id="FHa-8h-JfM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -154,4 +190,7 @@
             <point key="canvasLocation" x="101.5" y="95.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0Ve-t3-S6i"/>
+    </inferredMetricsTieBreakers>
 </document>

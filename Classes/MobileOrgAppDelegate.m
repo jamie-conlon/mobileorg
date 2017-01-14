@@ -121,17 +121,29 @@ __asm__(".weak_reference _OBJC_CLASS_$_NSURL");
     }
     return tabBarController;
 }
-
+/*
 - (OutlineViewController*)rootOutlineController {
-    if (rootOutlineController == nil) {
-        rootOutlineController = [[OutlineViewController alloc] initWithRootNode:RootNode()];
-    }
-    return rootOutlineController;
+  if (rootOutlineController == nil) {
+    rootOutlineController = [[OutlineViewController alloc] initWithRootNode:RootNode()];
+  }
+  return rootOutlineController;
+}
+*/
+
+OrgFileTableViewController *rootOutlineController2;
+
+- (OrgFileTableViewController*)rootOutlineController2 {
+  if (rootOutlineController2 == nil) {
+    UIStoryboard *outlineStoryboard = [UIStoryboard storyboardWithName:@"Outline" bundle:nil];
+    rootOutlineController2 = [outlineStoryboard instantiateInitialViewController];
+  }
+  return rootOutlineController2;
 }
 
 - (UINavigationController*)rootOutlineNavigationController {
     if (rootOutlineNavigationController == nil) {
-        rootOutlineNavigationController = [[UINavigationController alloc] initWithRootViewController:[self rootOutlineController]];
+      //rootOutlineNavigationController = [[UINavigationController alloc] initWithRootViewController:[self rootOutlineController]];
+      rootOutlineNavigationController = [[UINavigationController alloc] initWithRootViewController:self.rootOutlineController2];
     }
     return rootOutlineNavigationController;
 }
